@@ -1,0 +1,329 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+/* Reset */
+*{
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: rgb(244,212,199);
+	text-align: center;
+	font-family: "Lato","Georgia", serif;
+	line-height: 1.8em;
+	max-height: 100 vh;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* H font */
+
+h1, h2, h3, h4 {
+	font-family: "Minion Pro","Lato", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* Main */
+
+#content {
+	margin: 0;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+	clear: both;
+	text-align: center;
+	margin: 0px;
+	padding: 8px;
+	background: rgb(183,70,72);
+}
+
+.overBox {
+	width: 100%;
+	height: 4.2vh;	
+	background: rgb(244,200,153);
+	font-size: 0.9em;
+}
+
+.overBox a {
+	color: white;	
+	text-decoration: none;
+}
+
+.wideBox h1 {
+	font-weight: bold;
+	margin: 2.52vh auto;
+	color: white;
+	font-size: 2.8em;
+}
+
+
+/* Hint */
+
+#lumina {
+	background: rgba(50,50,50,0.7);
+	display: none;
+	height: 16vh;
+	width: 100%;
+	position: absolute;
+	z-index: 99;
+}
+
+#hint {
+	z-index: 9999;
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	border: 0;
+	color: white;
+	background: #fac752;
+	padding: 10px 4px 2px 4px;
+	border-radius: 100%;
+	width: 94px;
+	height: 94px;
+	font-size: 1em;
+}
+
+#hint img {
+	margin-top: 2px;
+	width: 50px;
+}
+
+/* Positions */
+
+#container_back {
+	margin: 1vh auto 0 auto;
+	padding: 10px 24px;
+	width: 100%;
+	height: 100%;
+}
+
+/* Initial IMGS */
+
+#cardPile {
+	margin: 2vh auto;
+	text-align: center;
+	padding: 0 auto;
+}
+
+#cardSlots {
+	background:url("../img/ferma/ferma.png");
+	width: 80%;
+	margin: 0 auto;
+	min-height: 44vh;
+	max-height: 48vh;
+	padding: 30px 12px 10px 12px;
+	border: 4px solid rgb(244,200,153);
+	/*-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;*/
+	-moz-box-shadow: 0 0 .3em rgba(204,172,159,0.8);
+	-webkit-box-shadow: 0 0 .3em rgba(204,172,159,0.8);
+	box-shadow: 0 0 .3em rgba(204,172,159,0.8);
+  
+}
+
+#cardPile {
+	width: 90%;
+	height: 100%;
+	padding: 10px;
+}
+
+/* Objects/Words/Pics */
+
+img {
+	z-index: 999;
+	max-height: 138px;
+	margin: 20px auto;
+}
+
+#cardSlots div, #cardPile div {
+	z-index: 999;
+	display: inline-block;
+	margin: 0 auto;
+	min-width: 10vw;
+	height: 25vh;
+	color: rgba(104,72,59,0.8);
+	font-size: 1.2em;
+	padding-bottom: 0;
+	border: 0px solid #333;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	margin: 0 0 0 10px;
+	background: rgba(0,0,0,0);
+}
+
+#cardSlots div{
+	padding-top: 4.8vh;
+}
+
+#cardSlots div:first-child, #cardPile div:first-child {
+	margin-left: 0;
+}
+
+#cardSlots div.hovered {
+	background: rgba(100,100,100,0.2);
+}
+
+#cardSlots div {
+	border-style: dashed;
+}
+
+#cardPile div {
+	color: #fff;
+	font-size: 50px;
+	text-shadow: 0 0 3px #000;
+}
+
+#cardPile div.ui-draggable-dragging {
+	-moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* Colors */
+
+#card1.correct { background: red; }
+#card2.correct { background: brown; }
+#card3.correct { background: orange; }
+#card4.correct { background: yellow; }
+#card5.correct { background: green; }
+#card6.correct { background: cyan; }
+#card7.correct { background: blue; }
+#card8.correct { background: indigo; }
+#card9.correct { background: purple; }
+#card10.correct { background: violet; }
+
+
+/* Fin message */
+#successMessage {
+	color: white;
+	position: absolute;
+	left: 580px;
+	top: 250px;
+	width: 0;
+	height: 0;
+	z-index: 100;
+	background: #fac752;
+	border: 0px solid rgb(180,180,180);
+	-moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	padding: 34px 20px;
+}
+#button {
+	margin:5px;
+	font-size: 1.24em;
+	padding: 20px;
+	background: rgb(10,10,10);
+	color: white;
+	min-width:100px;
+	min-height: 40px;
+}
+
+#tutMessage {
+	color: white;
+	position: absolute;
+	left: 1580px;
+	top: 250px;
+	width: 0;
+	height: 0;
+	z-index: 9000;
+	background: #fac752;
+	border: 0px solid rgb(180,180,180);
+	-moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+	box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+}
+
+#tutMessage img {
+	width: 100%;
+	min-height: 100%;
+}
+
+#tutButton {
+	margin:5px;
+	font-size: 1.84em;
+	padding: 24px;
+	background: rgb(10,10,10);
+	color: white;
+	min-width:120px;
+	min-height: 50px;
+	position: absolute;
+	z-index: 9900;
+	bottom: 50px;
+}
+
+@media screen and (max-width: 530px) {
+	
+	#container_back {
+		padding: 2px 0px;
+		max-height: 250px;
+	}
+	#cardSlots {padding:2px 0px; max-height: 240px; width:98%;}
+	#cardPile {margin:0; margin-top:10px; padding:0; width: 100%; max-height:210px;}
+	
+	#hint {
+	top: 90px;
+	right: 3px;
+	padding: 6px 2px 2px 2px;
+	width: 56px;
+	height: 56px;
+	}
+	
+	#hint img {width:26px;}
+	
+	.wideBox h1 {font-size: 2.2em; }
+	.overBox {max-height: 4.4vh;}
+	
+	img {max-width:86px; margin: 0;}
+	
+	#cardSlots div, #cardPile div {
+		line-height:3.4em;
+		padding: 0;
+		max-width: 19vw;
+		max-height: 86px;
+		min-width: 86px;
+		min-height: 86px;
+		height: auto;
+		font-size: 1.18em;
+		margin-top: 12px;
+	}
+	#cardSlots div {padding-top:18px; margin: 10px 1px;}
+	
+}
+
+@media screen and (max-width: 360px) {
+	img {max-width:72px; margin: 0;}
+	#cardPile div, #cardSlots div {
+		font-size:1.04em;
+		padding: 0;
+		max-width: 19vw;
+		max-height: 72px;
+		min-width: 72px;
+		min-height: 72px;
+	}
+	
+	#hint {
+	top: 2px;
+	right: 2px;
+	padding: 7px 2px 2px 2px;
+	width: 56px;
+	height: 56px;
+	}
+	
+	#hint img {width:26px;}
+	
+	
+	#cardPile {max-height:190px;margin-top:0px;}
+	#cardSlots {padding-top:20px;}
+}
